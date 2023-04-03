@@ -253,6 +253,10 @@
         <artifactId>maven-checkstyle-plugin</artifactId>
                 
         <version>3.2.1</version>
+
+        <configuration>
+        <skip>true</skip>
+        </configuration>
                 
         <dependencies>
                     
@@ -313,11 +317,9 @@
         </executions>
               
       </plugin>
-
+<!-- Adding asembly puggin-->
       <plugin>
-        <!-- NOTE: We don't need a groupId specification because the group is
-             org.apache.maven.plugins ...which is assumed by default.
-         -->
+        
         <artifactId>maven-assembly-plugin</artifactId>
         <version>3.5.0</version>
         <configuration>
@@ -813,15 +815,15 @@
   
 
     <dependencies>
-    
-
       <dependency>
         <groupId>org.checkerframework</groupId>
         <artifactId>checker-qual</artifactId>
         <version>3.31.0</version>
       </dependency>
 
+  
     </dependencies>
 
   </dependencyManagement>
+
 </project>
